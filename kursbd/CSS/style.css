@@ -1,0 +1,255 @@
+html {
+    box-sizing: border-box;
+}
+  
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all .5s;
+}
+
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* Container */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
+/* Header */
+.header {
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.header__inner,
+.header-item-list {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    /* opacity: 0;
+    animation: ani 0.6s forwards; */
+}
+
+.header-item__link {
+    padding: 5px;
+    font-size: 22px;
+    transition: all .2;
+}
+
+.header-item__link:hover {
+    color: #FFB021;
+}
+
+.header__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header__search button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 250px;
+    border: none;
+    background-color: transparent;
+}
+
+.header-item__search {
+    padding: 5px 15px;
+    width: 320px;
+    height: 46px;
+    font-size: 14px;
+    border: 2px solid #FFB021;
+    border-radius: 50px;
+    outline: none;
+}
+
+
+
+
+/* Main */
+.main__inner {
+    display: flex;
+}
+
+.left__menu {
+    margin-top: 180px;
+    position: fixed;
+    max-width: 150px;
+    /* opacity: 0;
+    animation: ani 0.6s forwards; */
+}
+
+.left-menu__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left-menu__link {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: transparent;
+    transition: background-color .5s, color .2s;
+}
+
+.left-menu__link:hover,
+.left-menu__link:focus {
+    color: #fff;
+    background-color: #FFB021;
+}
+
+.left-menu__active {
+    color: #fff;
+    background-color: #FFB021;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.room__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 1000px;
+    margin-top: 190px;
+    margin-left: 300px;
+    position: absolute;
+}
+
+.room__item {
+    padding: 6px;
+    min-height: 450px;
+    height: 500px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.room__item img {
+    width: 400px;
+    min-height: 300px;
+}
+
+.room__item span {
+    max-width: 405px;
+}
+
+
+
+/* Регистрация */
+.reg-container,
+.authorization-container {
+    position: fixed;
+    padding: 60px 40px;
+    width: 400px;
+    margin: 25vh auto;
+    left: 0;
+    right: 0;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(218, 127, 23, 0.596);
+    opacity: 0;
+    animation: ani 1.5s forwards;
+}
+
+.reg-container__item,
+.authorization-container__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.reg-container__item input,
+.reg-container__item button,
+.authorization-container__item input,
+.authorization-container__item button {
+    width: 250px;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.reg-container__item .reg-password__container input {
+    max-width: 120px;
+}
+
+.reg-container__item input:focus,
+.authorization-container__item input:focus {
+
+}
+
+.reg-container__item button:hover,
+.authorization-container__item button:hover {
+
+}
+
+.reg-password__container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Валидация */
+.validation__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.reg-error_message {
+  padding: 8px;
+  width: 250px;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.849);
+  border: 2px solid rgba(182, 20, 20, 0.699);
+  background: rgba(112, 23, 23, 0.534);
+  font-size: 14px;
+  border-radius: 10px;
+  opacity: 0;
+  animation: ani 2.5s forwards;
+}
+
+
+/* reservations */
